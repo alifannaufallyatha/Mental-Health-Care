@@ -1,0 +1,71 @@
+@layout('layouts/main')
+
+@section('body')
+<div class="bg-[#FFFFFF]">
+  <div class="flex flex-col md:flex-row gap-5 md:gap-0">
+
+    {{-- section image --}}
+    <div class="flex flex-col w-1/2 md:w-6/12 md:ml-0 bg-[#778F9C]" data-aos="fade-up-right" data-aos-duration="1000">
+      <div
+        class="overflow-hidden relative flex-col h-screen text-slate-300 md:pt-10 md:pr-5 md:mt-10 md:max-w-full bg-cover bg-no-repeat bg-center"
+        style="background-image: url({{asset('resources/images/pattern.png')}})">
+        <img src="{{asset('resources/images/pattern2.png')}}" class="absolute top-0 left-0 m-0" />
+        <img loading="lazy" src="{{asset('resources/images/images.png')}}"
+          class="object-cover absolute inset-0 size-1/2 ml-80 mt-20" />
+        <div class="absolute bottom-24 text-white text-7xl mb-20 ml-7 font-serif">
+          Peduli Mental Health pada anak
+        </div>
+      </div>
+    </div>
+
+    {{-- section form --}}
+    <div class="mt-20 flex flex-col ml-5 w-full md:w-6/12 md:ml-0" data-aos="fade-up-left" data-aos-duration="1000">
+      <div class="flex flex-col self-stretch px-5 my-auto text-base md:mt-10 md:max-w-full">
+        <div class="self-center text-5xl font-medium text-center text-black md:text-4xl">
+          Daftar
+        </div>
+        <div class="self-center mt-7 text-xl text-center text-gray-500 md:max-w-full">
+          Daftar untuk mendapatkan pengalaman
+          <br />
+          mengikuti event terbaik
+        </div>
+
+        <form action="{{route('/user')}}" method="post">
+          {{csrfField()}}
+          <div class="flex flex-col mt-12 text-2xl leading-5 text-black md:mt-10 md:max-w-full ml-24">
+            <label for="name" class="text-gray-600">Name</label>
+            <input type="text" name="fullName" id="name" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="flex flex-col mt-7 text-2xl leading-5 text-black md:max-w-full ml-24">
+            <label for="email" class="text-gray-600">Email</label>
+            <input type="email" name="email" id="email" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="flex flex-col mt-7 text-2xl leading-5 text-black md:max-w-full ml-24">
+            <label for="address" class="text-gray-600">Address</label>
+            <input type="text" name="address" id="address" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="flex flex-col mt-7 text-2xl leading-5 text-black md:max-w-full ml-24">
+            <label for="phoneNumber" class="text-gray-600">Phone Number</label>
+            <input type="number" name="phoneNumber" id="phoneNumber" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="flex flex-col mt-7 text-2xl leading-5 text-black md:max-w-full ml-24">
+            <label for="password" class="text-gray-600">Password</label>
+            <input type="password" name="password" id="password" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <button type="submit"
+            class="flex justify-center items-center self-center px-16 py-5 mt-14 text-xl font-medium leading-5 text-white whitespace-nowrap rounded-md bg-slate-500 w-3/5 md:px-5 md:mt-10 ml-36">
+            Register
+          </button>
+        </form>
+        <a class="text-lg font-bold decoration-sky-200 text-gray-600 ml-72 underline mt-3" href="{{route('/login')}}">Pergi ke halaman Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+@endsection

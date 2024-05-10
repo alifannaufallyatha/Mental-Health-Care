@@ -1,0 +1,66 @@
+@layout('layouts/main')
+
+@section('body')
+<div class="bg-[#FFFFFF]">
+  <div class="flex flex-col md:flex-row gap-5 md:gap-0">
+
+    {{-- section image --}}
+    <div class="flex flex-col w-1/2 md:w-6/12 md:ml-0 bg-[#778F9C]" data-aos="fade-up-right" data-aos-duration="1000">
+      <div
+        class="top-0 overflow-hidden relative flex-col h-screen text-slate-300 md:pt-10 md:pr-5 md:mt-10 md:max-w-full bg-cover bg-no-repeat bg-center"
+        style="background-image: url({{asset('resources/images/pattern.png')}})">
+        <img src="{{asset('resources/images/pattern2.png')}}" class="absolute top-0 left-0 m-0" />
+        <img loading="lazy" src="{{asset('resources/images/images.png')}}"
+          class="object-cover absolute inset-0 size-1/2 ml-80 mt-20" />
+        <div class="absolute bottom-24 text-white text-7xl mb-20 ml-7 font-serif">
+          Peduli Mental Health pada anak
+        </div>
+      </div>
+    </div>
+
+    {{-- section form --}}
+    <div class="mt-32 flex flex-col ml-5 w-full md:w-6/12 md:ml-0" data-aos="fade-up-left" data-aos-duration="1000">
+      <div class="flex flex-col self-stretch px-5 my-auto text-base md:mt-10 md:max-w-full">
+        <div class="self-center text-5xl font-medium text-center text-black md:text-4xl">
+          Masuk
+        </div>
+        <div class="self-center mt-7 text-xl text-center text-gray-500 md:max-w-full">
+          Waktunya untuk kamu bergabung dengan
+          <br />
+          event-event seru
+        </div>
+
+        <form action="{{route('/login')}}" method="post">
+          {{csrfField()}}
+          <div class="flex flex-col mt-12 text-2xl leading-5 text-black md:mt-10 md:max-w-full ml-24">
+            <label for="email" class="text-gray-600">User Name</label>
+            <input type="email" name="email" id="email" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="flex flex-col mt-7 text-2xl leading-5 text-black md:max-w-full ml-24">
+            <label for="password" class="text-gray-600">Password</label>
+            <input type="password" name="password" id="password" value="" placeholder=""
+              class="justify-center px-3 py-1.5 mt-3 whitespace-nowrap bg-white rounded-md border border-solid border-neutral-500 text-neutral-500 md:max-w-xl focus:outline-none focus:border-sky-200">
+          </div>
+          <div class="self-end mt-2 font-medium text-gray-500 ml-[550px]">
+            Lupa Password ?
+          </div>
+          <button type="submit"
+            class="flex justify-center items-center self-center px-16 py-5 mt-14 text-xl font-medium leading-5 text-white whitespace-nowrap rounded-md bg-slate-500 w-3/5 md:px-5 md:mt-10 ml-36">
+            Masuk
+          </button>
+        </form>
+        <div class="flex gap-1.5 self-center mt-12 font-medium md:mt-10 items-center">
+          <div class="grow text-gray-500">Belum Punya Akun ?</div>
+          <a href="{{route('account.create')}}">
+            <button class="justify-center px-6 py-1.5 text-white whitespace-nowrap bg-gray-500 rounded-md md:px-5 mt-2">
+              Daftar
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@endsection

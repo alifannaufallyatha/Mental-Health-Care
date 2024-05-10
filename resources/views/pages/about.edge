@@ -1,0 +1,94 @@
+@layout('layouts/main')
+
+@section('body')
+
+@!navbar()
+
+<section class="bg-white dark:bg-gray-900 bg-cover bg-no-repeat bg-center pt-24"
+  style="background-image: url('{{asset('resources/images/pattern2.png')}}');">
+  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12" data-aos="fade-up"
+    data-aos-duration="1000">
+    <div class="mr-auto place-self-center lg:col-span-7">
+      <h1
+        class="max-w-2xl mb-4 ml-28 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+        Kenalan dengan Kami, Yuk!</h1>
+      <p class="max-w-2xl ml-28 mb-6 font-light text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Kesehatan
+        Mental Health Care Anak adalah inti dari pendidikan inovatif, Kami berkomitmen untuk memberdayakan orang tua dan
+        anak-anak dengan pengetahuan serta keterampilan kesehatan mental yang esensial</p>
+    </div>
+    <div class="hidden lg:mt-0 lg:col-span-5 lg:flex lg:justify-center">
+      <img src="{{asset('resources/images/images2.png')}}" alt="mockup" class="w-4/5 h-auto ml-[570px]">
+    </div>
+  </div>
+</section>
+
+<div class="bg-[#BDD2DE] " data-aos="fade-down-left" data-aos-duration="1000">
+  <div class="pt-48 pl-28 pb-48">
+    <h1 class="text-black font-medium text-6xl text-left w-2/3 flex justify-center ml-56">
+      How it started?
+    </h1>
+
+    <p class="text-xl text-center text-black dark:text-gray-400 w-3/4 ml-32 mt-20">Berawal dari visi perhatian khusus
+      pada kesehatan mental anak-anak, kami membentuk inisiatif ini sebagai respons terhadap kurangnya perhatian di
+      sekolah dan masyarakat. Melalui penelitian dan program pengembangan, kami membentuk layanan kesehatan mental anak
+      yang komprehensif, memahami kebutuhan mereka secara mental dan emosional.
+    </p>
+  </div>
+</div>
+
+<div class="flex" data-aos="fade-down-right" data-aos-duration="1000">
+  <div class="pt-48 pl-24 pb-32 w-2/3">
+    <h1 class="text-black font-medium text-6xl text-left w-2/3 flex justify-center ml-20">
+      Visi
+    </h1>
+
+    <p class="text-xl text-black dark:text-gray-400 w-3/4 ml-20 mt-20 text-left">Menyediakan bantuan dan dukungan yang
+      cepat bagi anak-anak yang mengalami krisis emosional dan memastikan bahwa setiap anak memiliki akses perawatan
+      tepat pada waktunya.</p>
+
+    <p class="text-xl text-black dark:text-gray-400 w-3/4 ml-20 mt-10 text-left">Membangun komunitas yang peduli dan
+      inklusif, dimana anak-anak merasa didukung, dihargai, dan diterima, tanpa adanya stigma terkait dengan masalah
+      kesehatan mental.</p>
+  </div>
+
+  <div class="pt-48 pl-28 pb-48 w-2/3">
+    <h1 class="text-black font-medium text-6xl text-left w-2/3 flex justify-center ml-20">
+      Misi
+    </h1>
+
+    <p class="text-xl text-left text-black dark:text-gray-400 w-3/4 ml-20 mt-20">Mengedukasi orang tua, pendidik, dan
+      masyarakat tentang pentingnya kesehatan mental anak-anak serta dapat mendukung perkembangan emosional mereka.</p>
+
+    <p class="text-xl text-left text-black dark:text-gray-400 w-3/4 ml-20 mt-10">Menyediakan platform online yang aman
+      dan terpercaya untuk memberikan dukungan emosional, menyelengarakan sesi konseilng dan memfasilitasi forum diskusi
+      bagi anak-anak, orang tua, dan pendidik.</p>
+  </div>
+</div>
+
+<div class="flex" data-aos="fade-down-left" data-aos-duration="1000" style="background-image: url('{{asset('resources/images/pattern3.png')}}'), url('{{asset('resources/images/pattern4.png')}}'); background-position: left, right; background-repeat: no-repeat, no-repeat;">
+  <div class="pt-24 pl-24 pb-40 w-2/3 grid grid-cols-3 gap-4">
+    <h1 class="text-black font-medium text-6xl text-left w-full flex justify-center ml-56 col-span-3">
+      Our Values
+    </h1>
+
+    <div>
+      <h2 class="font-bold ml-44 w-full mt-10">Growth Mindset Emosional</h2>
+      <p class="text-xl text-black dark:text-gray-400 w-full ml-28 mt-10 text-center">Anak-anak didorong untuk selalu ingin berkembang dan belajar sepanjang hidup mereka.</p>
+    </div>
+
+    <div class="mt-56">
+      <h2 class="font-bold w-full ml-72 mt-10">Mental Resilience Builder</h2>
+      <p class="text-xl text-black dark:text-gray-400 w-full ml-56 mt-10 text-center">Setiap anak diberdayakan untuk mengatasi tantangan emosional dan menyelesaikan masalah secara aktif.</p>
+    </div>
+
+    <div>
+      <h2 class="font-bold ml-96 w-full mt-10">Mental Wellness Insight</h2>
+      <p class="text-xl text-center text-black dark:text-gray-400 w-full ml-[310px] mt-10">Membangun kesadaran diri Anak untuk kesejahteraan emosional yang unggul.</p>
+    </div>
+  </div>
+</div>
+
+@!team()
+
+@!footer()
+@end
