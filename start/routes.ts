@@ -31,12 +31,16 @@ router
     router.get('/admin', [PagesController, 'admin'])
     router.get('/profile', [PagesController, 'profile'])
     router.get('/guide', [PagesController, 'guide'])
+    router.get('/quiz', [PagesController, 'quiz'])
   })
   .use(middleware.auth())
 
   router.post('/login', [AccountsController, 'login'])
   router.get('/login', [AccountsController, 'index'])
 
+
+
   router.resource('account', AccountsController)
   // user route
   router.resource('user', UsersController)
+

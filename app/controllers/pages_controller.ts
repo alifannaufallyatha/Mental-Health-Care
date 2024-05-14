@@ -2,6 +2,7 @@ import Role from '#models/role'
 import User from '#models/user'
 import type { HttpContext } from '@adonisjs/core/http'
 
+
 export default class PagesController {
   async home({ view }: HttpContext) {
     // users from oldest to newest
@@ -27,9 +28,15 @@ export default class PagesController {
     return view.render('question/guide')
   }
 
+  async quiz({ view }: HttpContext) {
+    return view.render('question/quiz')
+  }
+
   async register({ view }: HttpContext) {
     const roles = await Role.query().where('name', '!=', 'Admin')
     // return console.log(roles)
     return view.render('pages/register', { roles: roles })
   }
+
+  
 }

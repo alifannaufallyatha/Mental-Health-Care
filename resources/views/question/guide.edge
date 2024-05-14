@@ -4,6 +4,32 @@
 
 @!navbar()
 
+<section class="bg-white dark:bg-gray-900 bg-cover bg-no-repeat bg-center pt-32 h-screen"
+  style="background-image: url('{{asset('resources/images/pattern2.png')}}');">
 
+  <div class="flex justify-center items-center " data-aos="zoom-out-up" data-aos-duration="1000">
+    <div
+      class="block max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow-xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+      <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">Baca
+        panduannya yuk!</h2>
+      <ol class="list-decimal list-inside text-gray-700 dark:text-gray-400 mt-8 p-6">
+        <li class="py-5">Terdapat jawaban Ya dan Tidak. Isilah sesuai persfektif anda terhadap gelaja anak Anda.</li>
+        <li class="py-5">Tes ini tidak diberi batas waktu. Jadi perlahan saja dalam mengisi.</li>
+        <li class="py-5">Cari tempat yang nyaman dan kondusif supaya Anda lebih fokus.</li>
+        <li class="py-5">Jika Anda keluar di tengah tes, maka seluruh proses tes dan jawaban akan hilang.</li>
+        <li class="py-5">Hasil tes dan solusi bisa Anda dapatkan setelah mengisi semua pertanyaan dengan lengkap.</li>
+      </ol>
+
+      <a href="{{route('/quiz')}}">
+        <button type="submit"
+          class="ml-40 shadow-2xl transition duration-300 ease-in-out flex justify-center items-center self-center px-10 py-5 text-xl font-medium leading-5 text-white whitespace-nowrap rounded-3xl bg-slate-500 w-1/3 md:px-5 md:mt-10 hover:bg-blue-500 animate__animated animate__bounce animate__infinite">
+          Mulai Tes
+        </button>
+      </a>
+    </div>
+  </div>
+
+</section>
 
 @end
